@@ -41,8 +41,8 @@ class Main():
         self.datestr = None
 
         dataset = self.env_config['dataset'] 
-        train_orig = pd.read_csv(f'./data/{dataset}/train.csv', sep=',', index_col=0)
-        test_orig = pd.read_csv(f'./data/{dataset}/test.csv', sep=',', index_col=0)
+        train_orig = pd.read_csv(f'/content/GDN/data/{dataset}/train.csv', sep=',', index_col=0)
+        test_orig = pd.read_csv(f'/content/GDN/data/{dataset}/train.csv', sep=',', index_col=0)
        
         train, test = train_orig, test_orig
 
