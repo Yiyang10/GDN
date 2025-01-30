@@ -2,7 +2,7 @@ import glob
 
 
 def get_feature_map(dataset):
-    feature_file = open(f'./data/{dataset}/list.txt', 'r')
+    feature_file = open(f'/content/GDN/data/{dataset}/list.txt', 'r')
     feature_list = []
     for ft in feature_file:
         feature_list.append(ft.strip())
@@ -10,7 +10,7 @@ def get_feature_map(dataset):
     return feature_list
 # graph is 'fully-connect'
 def get_fc_graph_struc(dataset):
-    feature_file = open(f'./data/{dataset}/list.txt', 'r')
+    feature_file = open(f'/content/GDN/data/{dataset}/list.txt', 'r')
 
     struc_map = {}
     feature_list = []
@@ -28,7 +28,7 @@ def get_fc_graph_struc(dataset):
     return struc_map
 
 def get_prior_graph_struc(dataset):
-    feature_file = open(f'./data/{dataset}/features.txt', 'r')
+    feature_file = open(f'/content/GDN/data/{dataset}/list.txt', 'r')
 
     struc_map = {}
     feature_list = []
