@@ -153,7 +153,8 @@ class GDN(nn.Module):
 
             dim = weights.shape[-1]
             topk_num = self.topk
-
+            topk_num = min(topk_num, cos_ji_mat.shape[-1])
+            
             topk_indices_ji = torch.topk(cos_ji_mat, topk_num, dim=-1)[1]
 
             self.learned_graph = topk_indices_ji
